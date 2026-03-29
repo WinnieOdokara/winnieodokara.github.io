@@ -10,23 +10,35 @@
       font-family: Arial, sans-serif;
       background: #020617;
       color: #e2e8f0;
+      display: flex;
     }
 
+    /* SIDEBAR */
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 20px;
+      width: 200px;
+      height: 100vh;
       background: #020617;
-      position: sticky;
-      top: 0;
-      border-bottom: 1px solid #1e293b;
+      border-right: 1px solid #1e293b;
+      padding-top: 40px;
+      position: fixed;
     }
 
     nav a {
-      color: #38bdf8;
+      display: block;
+      padding: 15px 20px;
+      color: #f472b6;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #1e293b;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      margin-left: 200px;
+      width: 100%;
     }
 
     header {
@@ -42,7 +54,12 @@
 
     header p {
       color: #94a3b8;
-      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    header a {
+      color: #f472b6;
+      text-decoration: none;
     }
 
     .section {
@@ -52,7 +69,7 @@
     }
 
     h2 {
-      border-bottom: 2px solid #38bdf8;
+      border-bottom: 2px solid #f472b6;
       display: inline-block;
       padding-bottom: 5px;
     }
@@ -86,14 +103,14 @@
 
     .card:hover {
       transform: translateY(-5px);
-      border-color: #38bdf8;
+      border-color: #f472b6;
     }
 
     a.button {
       display: inline-block;
       margin-top: 10px;
       padding: 8px 14px;
-      background: #38bdf8;
+      background: #f472b6;
       color: #020617;
       border-radius: 6px;
       text-decoration: none;
@@ -121,7 +138,7 @@
 
 <body>
 
-<!-- NAV -->
+<!-- SIDEBAR NAV -->
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About</a>
@@ -129,9 +146,17 @@
   <a href="#projects">Projects</a>
 </nav>
 
+<div class="main">
+
 <!-- HOME -->
 <header id="home">
   <h1>Winnie</h1>
+  <p>University of North Carolina at Charlotte</p>
+  <p>Concord, NC</p>
+  <p>
+    <a href="https://github.com/WinnieOdokara">GitHub</a> |
+    <a href="https://www.linkedin.com/in/winnieodokara/">LinkedIn</a>
+  </p>
   <p>Cybersecurity Enthusiast | Ethical Hacking | Network Defense</p>
 </header>
 
@@ -205,6 +230,8 @@
 <footer>
   <p>© 2026 Winnie | Cybersecurity Portfolio</p>
 </footer>
+
+</div>
 
 </body>
 </html>
