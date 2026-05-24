@@ -1,0 +1,100 @@
+/* body controls the whole page.*/
+body {
+    background-color: #f4f1ea;
+    color: #1d2b2a;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* header, main, footer centers the layout*/
+header,
+main,
+footer {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 3px solid #3f6f5f;
+}
+
+h1,
+h2 {
+    color: #243b53;
+}
+
+/* .tagline controls the style of the tagline. */
+.tagline {
+    font-style: italic;
+    color: #3f6f5f;
+}
+
+/* nav controls the navigation bar style. */
+nav {
+    margin: 15px 0;
+}
+
+/* a controls the link style */
+a {
+    color: #2f5d50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*  a:hover controls the link hover style.*/
+a:hover {
+    color: #7a4e2d;
+    text-decoration: underline;
+}
+
+main {
+    background-color: #fffaf2;
+    border: 1px solid #d8cbb8;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+figcaption,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    border-left: 4px solid #3f6f5f;
+    padding-left: 15px;
+    margin: 25px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 3px solid #3f6f5f;
+    margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+
+    header,
+    main,
+    footer {
+        padding: 15px;
+    }
+
+    nav {
+        line-height: 2;
+    }
+}
