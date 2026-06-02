@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odokara Web Design | Home</title>
+
+    <!-- Color palette from Coolors: https://coolors.co/6f2dbd-a663cc-b298dc-b8d0eb-b9faf8 -->
+    <style>
+        body {
+            margin: 0;
+            background-color: #b8d0eb;
+            color: #25113f;
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.7;
+        }
+
+        header,
+        main,
+        footer {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 28px 24px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 6px double #6f2dbd;
+        }
+
+        h1 {
+            color: #6f2dbd;
+            font-size: clamp(34px, 6vw, 48px);
+            letter-spacing: 1px;
+            transition: color 0.3s ease, letter-spacing 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        h1:hover {
+            color: #a663cc;
+            letter-spacing: 3px;
+            text-shadow: 0 0 12px #b9faf8;
+        }
+
+        h1 img {
+            width: 120px;
+            height: 110px;
+            vertical-align: middle;
+            margin-right: 16px;
+        }
+
+        h2,
+        h3 {
+            color: #6f2dbd;
+            text-align: center;
+        }
+
+        main {
+            background-color: #f6fbff;
+            border: 6px double #a663cc;
+            border-radius: 18px;
+            margin-top: 30px;
+        }
+
+        section {
+            margin-top: 35px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        address {
+            background-color: #e8f4ff;
+            border-left: 6px solid #6f2dbd;
+            padding: 16px;
+            font-style: normal;
+        }
+
+        a {
+            color: #6f2dbd;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        a:hover {
+            color: #a663cc;
+            text-shadow: 0 0 8px #b9faf8;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 6px double #6f2dbd;
+            margin-top: 30px;
+            font-size: 0.95rem;
+        }
+
+        @media screen and (max-width: 700px) {
+            h1 img {
+                display: block;
+                margin: 0 auto 12px auto;
+            }
+
+            header,
+            main,
+            footer {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="images/odokara-logo.png" alt="Odokara Web Design logo" width="120" height="110">
+            Odokara Web Design
+        </h1>
+
+        <p>Simple, thoughtful, and student-built web design.</p>
+
+        <nav>
+            <a href="../">Course Site</a>
+            ||
+            <a href="../../">Personal Home Page</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Odokara Web Design Services</h2>
+
+        <p>
+            Odokara Web Design is a fictitious design and consulting firm created to represent
+            clean, organized, and accessible web development. The firm focuses on building pages
+            that are easy to navigate, visually balanced, and clear for users.
+        </p>
+
+        <section>
+            <h3>What Makes Us Stand Out</h3>
+
+            <ul>
+                <li>Clean and organized page layouts</li>
+                <li>Readable designs with strong visual structure</li>
+                <li>Simple navigation that helps users move easily</li>
+                <li>Attention to accessibility and contrast</li>
+                <li>Responsive pages for different screen sizes</li>
+                <li>Thoughtful use of color, spacing, and typography</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Client Focus</h3>
+
+            <p>
+                For a client, Odokara Web Design would focus on creating a simple and polished
+                website that communicates clearly, looks professional, and supports the client's
+                purpose without unnecessary clutter.
+            </p>
+
+            <address>
+                Odokara Web Design<br>
+                123 Creative Lane<br>
+                Charlotte, NC 28223<br>
+                Email: contact@odokarawebdesign.com<br>
+                Phone: 704-555-0135
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>Odokara Web Design ©2026</p>
+
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank">Validate HTML</a>
+            ||
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">Validate CSS</a>
+        </p>
+    </footer>
+</body>
+
+</html>
