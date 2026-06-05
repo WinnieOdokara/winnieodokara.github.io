@@ -1,15 +1,40 @@
-/* Web validation means checking a webpage's source code against the official technical standards set by the World Wide Web Consortium (W3C). Validation ensures predictability, performance, and accessibility accross different browsers and devices. */
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        const htmlValidationLink = document.getElementById("validation-link-html");
+        const cssValidationLink = document.getElementById("validation-link-css");
+        const currentYear = document.getElementById("current-year");
 
-/* Append current page URL to W3C HTML validator query string */
-document.getElementById("validation-link-html").setAttribute(
-    "href",
-    "https://validator.w3.org/check?uri=" + location.href
-);
+        if (htmlValidationLink) {
+            htmlValidationLink.setAttribute(
+                "href",
+                "https://validator.w3.org/check?uri=" + location.href
+            );
+        }
 
-document.getElementById("validation-link-css").setAttribute(
-    "href",
-    "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
-);
+        if (cssValidationLink) {
+            cssValidationLink.setAttribute(
+                "href",
+                "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
+            );
+        }
 
-/* Dynamically update footer copyright year to avoid manual updates */
-document.getElementById("current-year").textContent = new Date().getFullYear();
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+    }, 300);
+});
+
+/* Header and Footer components for sample HTML files 
+
+    <!-- HEADER is included on all pages for consistent navigation. -->
+    <div data-include="components/header.html"></div>
+
+    < !--FOOTER is included on all pages for consistent information and links. -- >
+    <div data-include="components/footer.html"></div>
+
+    <!--Loads reusable header and footer components. -- >
+    <script src="scripts/include_components.js"></script>
+
+    <!--Loads JavaScript for validation links and automatic copyright year. -- >
+    <script src="scripts/defaultscripts.js"></script>
+*/

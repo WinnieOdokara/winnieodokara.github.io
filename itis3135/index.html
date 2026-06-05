@@ -15,16 +15,9 @@
 </head>
 
 <body>
-    <header>
-        <h1>Winnie Odokara's Wise Owl | ITIS3135</h1>
-        <p class="tagline">Learning web development with a security-first mindset.</p>
-        <nav>
-            <a href="./">Home</a> ||
-            <a href="introduction.html">Introduction</a> ||
-            <a href="about.html">About</a> ||
-            <a href="contract.html">Contract</a>
-        </nav>
-    </header>
+
+    <!-- Header is included on all pages for consistent navigation. -->
+    <div data-include="components/header.html"></div>
 
     <main>
         <h2>Home</h2>
@@ -41,32 +34,11 @@
         </p>
     </main>
 
-    <footer>
-        <nav>
-            <a href="https://webpages.charlotte.edu/wodokara/">UNCC Webspace</a> ||
-            <a href="https://github.com/WinnieOdokara">GitHub</a> ||
-            <a href="https://winnieodokara.github.io/">GitHub.io</a> ||
-            <a href="https://winnieodokara.github.io/itis3135/">ITIS3135.io</a> ||
-            <a href="https://www.freecodecamp.org/WiseOwl">FreeCodeCamp</a> ||
-            <a href="https://www.codecademy.com/profiles/WiseOwll">Codecademy</a> ||
-            <a href="https://www.linkedin.com/in/winnieodokara/">LinkedIn</a>
-        </nav>
+    <!-- Footer is included on all pages for consistent information and links. -->
+    <div data-include="components/footer.html"></div>
 
-        <p>
-            Designed by <a href="odokarawebdesign.com/">Odokara Web Design</a> ©<span id="current-year">2026</span>
-        </p>
-
-        <p>
-            <!-- Validation links are updated by scripts/defaultscripts.js to check the current page. -->
-            <a id="validation-link-html" href="https://validator.w3.org/check?uri=referer" target="_blank">Validate
-                HTML</a>
-            ||
-
-            <a id="validation-link-css" href="https://jigsaw.w3.org/css-validator/check/referer"
-                target="_blank">Validate
-                CSS</a>
-        </p>
-    </footer>
+    <!-- Loads reusable header and footer components. -->
+    <script src="scripts/include_components.js"></script>
 
     <!-- Loads JavaScript for validation links and automatic copyright year. -->
     <script src="scripts/defaultscripts.js"></script>

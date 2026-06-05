@@ -29,7 +29,7 @@ body::before {
     width: 200px;
     background-color: #e2a8e2;
     padding: 20px;
-    border: 6px double #c9a227;
+    border: 6px groove #c9a227;
     border-radius: 18px;
     box-sizing: border-box;
     z-index: 100;

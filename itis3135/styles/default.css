@@ -1,4 +1,4 @@
-/* body controls the whole page.*/
+/* body controls the whole page. */
 body {
     background-color: #f4f1ea;
     color: #1d2b2a;
@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
 }
 
-/* header, main, footer centers the layout*/
+/* header, main, footer center the layout. */
 header,
 main,
 footer {
@@ -32,24 +32,83 @@ h2 {
     color: #3f6f5f;
 }
 
-/* nav controls the navigation bar style. */
+/* Navigation layout */
 nav {
     margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
-/* a controls the link style */
+/* General link style */
 a {
     color: #2f5d50;
     font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    padding: 7px 10px;
 }
 
-/*  a:hover controls the link hover style.*/
+/* Same hover effect for all links */
 a:hover {
-    color: #7a4e2d;
+    color: #2f5d50;
     text-decoration: underline;
 }
 
+footer {
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 3px solid #3f6f5f;
+    margin-top: 20px;
+    padding-top: 30px;
+}
+
+/* Footer text sections */
+.designed-by,
+.validation-links {
+    max-width: 1040px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fffaf2;
+    background-color: #1d2b2a;
+    box-sizing: border-box;
+}
+
+.designed-by {
+    font-size: 0.85rem;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding: 15px 10px 1.5px 10px;
+}
+
+.designed-by a {
+    padding: 0 4px;
+    color: #fffaf2;
+}
+
+.validation-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 2px 10px 6px 10px;
+}
+
+.validation-links a {
+    color: #fffaf2;
+}
+
+.designed-by a:hover,
+.validation-links a:hover {
+    color: #f4f1ea;
+    text-decoration: underline;
+}
+
+/* Main content box */
 main {
     background-color: #fffaf2;
     border: 1px solid #d8cbb8;
@@ -78,13 +137,6 @@ blockquote {
     margin: 25px;
 }
 
-footer {
-    text-align: center;
-    font-size: 0.95rem;
-    border-top: 3px solid #3f6f5f;
-    margin-top: 20px;
-}
-
 /* Responsive design for smaller screens */
 @media screen and (max-width: 600px) {
 
@@ -94,7 +146,9 @@ footer {
         padding: 15px;
     }
 
-    nav {
+    nav,
+    .validation-links {
         line-height: 2;
+        gap: 8px;
     }
 }

@@ -112,6 +112,31 @@
                 padding: 24px 18px;
             }
         }
+
+        .button-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #6f2dbd;
+            border-left: 8px solid #b9faf8;
+            padding: 12px 24px;
+            margin-top: 18px;
+        }
+
+        .button-nav a {
+            color: #ffffff;
+            padding: 8px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button-nav a:hover {
+            background-color: #b9faf8;
+            color: #6f2dbd;
+            border-radius: 6px;
+            transform: translateY(-2px);
+        }
     </style>
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -126,9 +151,8 @@
 
         <p>Simple, thoughtful, and student-built web design.</p>
 
-        <nav>
+        <nav class="button-nav">
             <a href="../">Course Site</a>
-            ||
             <a href="../../">Personal Home Page</a>
         </nav>
     </header>
@@ -179,7 +203,6 @@
 
         <p>
             <a href="https://validator.w3.org/check?uri=referer" target="_blank">Validate HTML</a>
-            ||
             <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">Validate CSS</a>
         </p>
     </footer>
