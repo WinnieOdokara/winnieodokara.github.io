@@ -115,7 +115,7 @@
     </main>
 
     <footer>
-        <p>Winnie Odokara ©<span id="current-year">2026</span></p>
+        <p>Winnie Odokara ©<span id="current-year"></span></p>
 
         <p>
             <a href="https://validator.w3.org/check?uri=referer" target="_blank">Validate HTML</a>
@@ -123,6 +123,10 @@
             <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">Validate CSS</a>
         </p>
     </footer>
+    <!-- script to automate your copyright date -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

@@ -12,21 +12,21 @@
             margin: 0;
             background-color: #b8d0eb;
             color: #25113f;
-            font-family: Georgia, 'Times New Roman', serif;
+            font-family: arial, sans-serif;
             line-height: 1.7;
         }
 
         header,
         main,
         footer {
-            max-width: 900px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 28px 24px;
         }
 
         header {
             text-align: center;
-            border-bottom: 6px double #6f2dbd;
+            border-bottom: 6px solid #6f2dbd;
         }
 
         h1 {
@@ -56,8 +56,9 @@
         }
 
         main {
+            max-width: 1200px;
             background-color: #f6fbff;
-            border: 6px double #a663cc;
+            border: 6px hidden #a663cc;
             border-radius: 18px;
             margin-top: 30px;
         }
@@ -76,9 +77,26 @@
 
         address {
             background-color: #e8f4ff;
-            border-left: 6px solid #6f2dbd;
+            border: 5px solid #6f2dbd;
             padding: 16px;
             font-style: normal;
+            text-align: left;
+            border-radius: 8px;
+        }
+
+        address table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        address td {
+
+            vertical-align: top;
+            padding: 10px 40px;
+        }
+
+        #contact-details {
+            text-align: left;
         }
 
         a {
@@ -95,7 +113,7 @@
 
         footer {
             text-align: center;
-            border-top: 6px double #6f2dbd;
+            border-top: 6px groove #6f2dbd;
             margin-top: 30px;
             font-size: 0.95rem;
         }
@@ -115,10 +133,9 @@
 
         .button-nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: left;
             align-items: center;
             background-color: #6f2dbd;
-            border-left: 8px solid #b9faf8;
             padding: 12px 24px;
             margin-top: 18px;
         }
@@ -137,6 +154,33 @@
             border-radius: 6px;
             transform: translateY(-2px);
         }
+
+        footer .validation-links {
+            text-align: right;
+            font-size: 0.85rem;
+        }
+
+        footer .validation-links a {
+            color: #5e239d;
+            text-decoration: none;
+            margin-left: 10px;
+
+        }
+
+        footer .validation-links a:first-child::after {
+            content: "|";
+            margin-left: 20px;
+            /* Space between the pipe and the next link */
+            color: #5e239d;
+            cursor: default;
+        }
+
+        footer .validation-links a:hover {
+            text-decoration: underline;
+            color: #b9faf8;
+            /* pop effect on hover */
+            transform: translateY(-3px);
+        }
     </style>
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -152,8 +196,8 @@
         <p>Simple, thoughtful, and student-built web design.</p>
 
         <nav class="button-nav">
-            <a href="../">Course Site</a>
-            <a href="../../">Personal Home Page</a>
+            <a href="../../">Services</a>
+            <a href="#contact-info">Contact</a>
         </nav>
     </header>
 
@@ -170,12 +214,48 @@
             <h3>What Makes Us Stand Out</h3>
 
             <ul>
-                <li>Clean and organized page layouts</li>
-                <li>Readable designs with strong visual structure</li>
-                <li>Simple navigation that helps users move easily</li>
-                <li>Attention to accessibility and contrast</li>
-                <li>Responsive pages for different screen sizes</li>
-                <li>Thoughtful use of color, spacing, and typography</li>
+                <li>
+                    <strong>Brand Identity Strategy</strong>
+                    <p>Your brand is more than a logo; it is the heartbeat of your digital presence. We craft cohesive
+                        visual and messaging strategies that resonate with your target audience. By aligning your
+                        aesthetic
+                        with your business values, we ensure your brand leaves a lasting, authentic impression in a
+                        crowded
+                        market.</p>
+                </li>
+
+
+                <li>
+                    <strong>Responsive UI/UX Design</strong>
+                    <p>We create intuitive, user-friendly interfaces that provide an exceptional experience across all
+                        devices. Our design process is centered around the user, ensuring that every interaction is
+                        seamless
+                        and engaging. Responsive design ensures your website looks great on any device.</p>
+                </li>
+
+                <li>
+                    <strong>Security-First Approach</strong>
+                    <p>We prioritize security in every aspect of our development process. From implementing robust
+                        authentication mechanisms to ensuring data protection, we build websites that are secure by
+                        design.
+                        This approach helps safeguard your business and your users' information.</p>
+                </li>
+
+                <li>
+                    <strong>Performance Optimization</strong>
+                    <p>We optimize website performance to ensure fast loading times and smooth interactions. This
+                        includes
+                        image optimization, code minification, and efficient resource management to provide the best
+                        possible user experience.</p>
+                </li>
+
+                <li>
+                    <strong>SEO &amp; Analytics</strong>
+                    <p>We implement search engine optimization strategies and integrate analytics tools to help you
+                        understand your audience and improve your website's visibility and performance. We use
+                        data-driven
+                        insights to inform our design and development decisions.</p>
+                </li>
             </ul>
         </section>
 
@@ -188,12 +268,26 @@
                 purpose without unnecessary clutter.
             </p>
 
-            <address>
-                Odokara Web Design<br>
-                123 Creative Lane<br>
-                Charlotte, NC 28223<br>
-                Email: contact@odokarawebdesign.com<br>
-                Phone: 704-555-0135
+            <address id="contact-info">
+                <table>
+                    <tr>
+                        <td id="contact-details">
+                            <strong>Odokara Web Design</strong><br>
+                            123 Creative Lane<br>
+                            Charlotte, NC 28223<br>
+                            Email: contact@odokarawebdesign.com<br>
+                            Phone: 704-555-0135
+                        </td>
+
+                        <td>
+                            <strong>Client Hours</strong><br>
+                            Monday - Friday<br>
+                            9:00 AM - 5:00 PM<br>
+                            Virtual consultations available<br>
+                            Response time: 1-2 business days
+                        </td>
+                    </tr>
+                </table>
             </address>
         </section>
     </main>
@@ -201,9 +295,9 @@
     <footer>
         <p>Odokara Web Design ©2026</p>
 
-        <p>
+        <p class="validation-links">
             <a href="https://validator.w3.org/check?uri=referer" target="_blank">Validate HTML</a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">Validate CSS</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">Validate CSS</a>
         </p>
     </footer>
 </body>
