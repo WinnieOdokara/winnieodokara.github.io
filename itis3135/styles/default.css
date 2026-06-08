@@ -137,6 +137,33 @@ blockquote {
     margin: 25px;
 }
 
+.secondary-menu-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #1d2b2a;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+.secondary-nav {
+    margin-top: 5px;
+}
+
+.secondary-nav a {
+    display: inline-block;
+    background-color: #fffaf2;
+    color: #3f6f5f;
+    border: 2px solid #3f6f5f;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.secondary-nav a:hover {
+    color: #fffaf2;
+    background-color: #1d2b2a;
+    text-decoration: none;
+}
+
 /* Responsive design for smaller screens */
 @media screen and (max-width: 600px) {
 
