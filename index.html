@@ -10,59 +10,86 @@
         body {
             margin: 0;
             font-family: 'Courier New', Courier, monospace;
-            background: #020617;
+            background:
+                radial-gradient(circle at top left, rgba(244, 114, 182, 0.35), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(167, 139, 250, 0.35), transparent 35%),
+                linear-gradient(135deg, #020617, #0f172a, #020617);
             color: #e2e8f0;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header,
         main,
         footer {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
         }
 
         header {
             text-align: center;
-            background: radial-gradient(circle, #0f172a, #020617);
-            border-bottom: 1px solid #1e293b;
+            background: transparent;
+            border-bottom: 3px solid rgba(244, 114, 182, 0.25);
         }
 
+
         h1 {
-            font-size: clamp(32px, 6vw, 42px);
+            font-size: clamp(40px, 7vw, 60px);
             margin-bottom: 10px;
             color: #f8fafc;
+            text-shadow: 0 0 8px rgba(244, 114, 182, 0.65);
         }
 
         h2 {
-            color: #f472b6;
-            border-bottom: 2px solid #f472b6;
+            color: #e3acd8;
             display: inline-block;
             padding-bottom: 5px;
         }
 
         main {
-            background-color: #0f172a;
-            border: 1px solid #1e293b;
+            background-color: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(244, 114, 182, 0.35);
             border-radius: 12px;
         }
 
         a {
-            color: #f472b6;
+            color: #e3acd8;
             font-weight: bold;
-            text-decoration: none;
+            text-decoration: underline;
+            text-underline-offset: 4px;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #f472b6;
+            text-shadow:
+                0 0 6px #f472b6,
+                0 0 12px #ec4899;
         }
 
         footer {
-            text-align: center;
             color: #94a3b8;
             border-top: 1px solid #1e293b;
-            margin-top: 20px;
+            margin-top: auto;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .validation-links {
+            font-size: 0.75rem;
+            text-align: right;
         }
 
         @media screen and (max-width: 600px) {
@@ -71,6 +98,12 @@
             main,
             footer {
                 padding: 24px 16px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
             }
         }
 
@@ -83,9 +116,40 @@
             transform: translateY(-5px);
             text-shadow: 0 0 12px #f472b6;
         }
+
+        .course-link-text {
+            margin-top: 40px;
+        }
+
+        .neon-button {
+            display: inline-block;
+            color: #ffd6f0;
+            border: 2px solid #f472b6;
+            border-radius: 10px;
+            padding: 10px 16px;
+            margin-left: 6px;
+            text-decoration: none;
+            box-shadow:
+                0 0 6px #f472b6,
+                inset 0 0 6px #f472b6;
+            text-shadow:
+                0 0 5px #f472b6,
+                0 0 10px #f472b6;
+            transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .neon-button:hover {
+            color: #020617;
+            background-color: #f472b6;
+            box-shadow:
+                0 0 10px #f472b6,
+                0 0 25px #f472b6,
+                0 0 45px #ec4899;
+            transform: translateY(-3px);
+        }
     </style>
 
-    <!--Lint JS for code quality and security analysis-->
+    <!-- Accumulus/lint script for course validation -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -108,8 +172,9 @@
                 This page is separate from my course website and serves as a simple personal landing page.
             </p>
 
-            <p>
-                <a href="itis3135/">Visit my ITIS3135 Course Site</a>
+            <p class="course-link-text">
+                Visit my
+                <a class="neon-button" href="itis3135/">ITIS3135 Course Site</a>
             </p>
         </section>
     </main>
@@ -117,7 +182,7 @@
     <footer>
         <p>Winnie Odokara ©<span id="current-year"></span></p>
 
-        <p>
+        <p class="validation-links">
             <a href="https://validator.w3.org/check?uri=referer" target="_blank">Validate HTML</a>
             |
             <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">Validate CSS</a>
