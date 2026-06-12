@@ -45,7 +45,7 @@ nav {
 a {
     color: #2f5d50;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.3s ease, text-shadow 0.3s ease;
     padding: 7px 10px;
 }
@@ -53,7 +53,7 @@ a {
 /* Same hover effect for all links */
 a:hover {
     color: #2f5d50;
-    text-decoration: underline;
+    transform: translateY(-5px);
 }
 
 footer {
@@ -96,6 +96,7 @@ footer {
     margin-top: 0;
     margin-bottom: 8px;
     padding: 2px 10px 6px 10px;
+    font-size: 0.70rem;
 }
 
 .validation-links a {
@@ -143,10 +144,12 @@ blockquote {
     color: #1d2b2a;
     margin-top: 18px;
     margin-bottom: 6px;
+    text-align: left;
 }
 
 .secondary-nav {
     margin-top: 5px;
+    justify-content: left;
 }
 
 .secondary-nav a {
@@ -154,14 +157,161 @@ blockquote {
     background-color: #fffaf2;
     color: #3f6f5f;
     border: 2px solid #3f6f5f;
-    border-radius: 8px;
-    padding: 6px 10px;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    text-decoration: none;
 }
 
 .secondary-nav a:hover {
     color: #fffaf2;
     background-color: #1d2b2a;
     text-decoration: none;
+}
+
+.evaluation-note {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #3f6f5f;
+    border-left: 3px solid #3f6f5f;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.evaluation-heading {
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+
+.evaluation-link {
+    display: inline-block;
+    color: #2f5d50;
+    text-decoration: underline;
+    text-decoration-color: #2f5d50;
+    transition: transform 0.3s ease;
+    text-decoration-thickness: 1px;
+}
+
+.evaluation-link:hover {
+    color: #2f5d50;
+    text-decoration-color: #2f5d50;
+    transform: translateY(-5px);
+}
+
+.evaluation-list {
+    margin-top: 4px;
+}
+
+/* --- Cybersecurity Theme Style --- */
+.cyber-theme {
+    background-color: #2b1b0e;
+    /* Espresso */
+    color: #fdfaf6;
+    /* Cream */
+}
+
+.cyber-theme main {
+    background-color: #3b2818;
+    /* Slightly lighter espresso for contrast */
+    border: 1px solid #d4af37;
+    /* Metallic Gold border */
+}
+
+.cyber-theme h1,
+.cyber-theme h2 {
+    color: #d4af37;
+    /* Gold headings */
+}
+
+.cyber-theme a {
+    color: #d4af37;
+}
+
+.cyber-theme a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #d4af37;
+}
+
+.cyber-theme header,
+.cyber-theme footer {
+    border-color: #d4af37;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.threat-card {
+    border: 2px solid #d4af37;
+    /* Metallic Gold */
+    background-color: #2b1b0e;
+    padding: 15px;
+    border-radius: 8px;
+    color: #fdfaf6;
+}
+
+.threat-card h3 {
+    color: #d4af37;
+    margin-top: 0;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: #fdfaf6;
+}
+
+th,
+td {
+    border: 1px solid #d4af37;
+    /* Metallic Gold */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3b2818;
+    color: #d4af37;
+}
+
+section {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d4af37;
+    /* Gold separator */
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #3b2818;
+    border-bottom: 3px solid #d4af37;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #d4af37;
+    color: #2b1b0e;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #fdfaf6;
+    color: #2b1b0e;
 }
 
 /* Responsive design for smaller screens */

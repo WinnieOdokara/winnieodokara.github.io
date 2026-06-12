@@ -4,19 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Wise Owl Cybersecurity Academy</title>
 
     <!-- Lint JS for code quality and security analysis -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="cyber-theme">
     <!-- HEADER is included on all pages for consistent navigation. -->
     <div data-include="components/header.html"></div>
 
     <main>
-        <h2>Survey</h2>
+        <h2>Cybersecurity Academy Enrollment Form</h2>
+        <form action="https://your-submission-url-here.com" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Experience Assessment</legend>
+                <p>What is your primary area of interest?</p>
+                <input type="radio" id="threat" name="interest" value="threat">
+                <label for="threat">Threat Intelligence</label><br>
+                <input type="radio" id="network" name="interest" value="network">
+                <label for="network">Network Security</label>
+
+                <p>Preferred Learning Schedule:</p>
+                <input type="radio" id="night" name="schedule" value="night">
+                <label for="night">Night Owl (Evening)</label><br>
+                <input type="radio" id="early" name="schedule" value="early">
+                <label for="early">Early Bird (Morning)</label>
+            </fieldset>
+
+            <input type="submit" value="Submit Enrollment">
+        </form>
     </main>
 
     <!-- Footer is included on all pages for consistent information and links. -->
